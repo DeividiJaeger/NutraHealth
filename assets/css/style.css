@@ -97,27 +97,6 @@ body {
     padding: 0;
     background-color: white;
 }
-
-#professionals {
-    padding: 20px;
-    background-color: white;
-}
-
-.professionals-list {
-    display: flex;
-    justify-content: space-around;
-}
-
-.professional {
-    text-align: center;
-}
-
-.professional img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
 .button-vejamais {
     background-color: #2e4170; 
     color: white; 
@@ -132,4 +111,41 @@ body {
 }
 .button-vejamais:hover {
     background-color: #415894;
+}
+
+/* Estilizando o card */
+.card {
+    max-width: 320px; /* Largura máxima do card */
+    border-radius: 10px; /* Borda arredondada */
+    overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse os limites do card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para o card */
+    background-color: #ffffff; /* Cor de fundo do card */
+    margin: 20px auto; /* Centraliza o card horizontalmente */
+}
+
+/* Estilizando a imagem dentro do card */
+.card-image img {
+    width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    height: 250px; /* Altura fixa para a imagem */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço, cortando se necessário */
+}
+
+/* Estilizando o conteúdo do card */
+.card-content {
+    padding: 20px; /* Espaçamento interno */
+}
+
+/* Estilizando o título do card */
+.card-title {
+    font-size: 1.25rem; /* Tamanho da fonte */
+    font-weight: 600; /* Espessura da fonte */
+    color: #333333; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo do título */
+}
+
+/* Estilizando a descrição do card */
+.card-description {
+    font-size: 0.875rem; /* Tamanho da fonte */
+    color: #777777; /* Cor do texto */
+    margin-bottom: 10px; /* Espaçamento abaixo da descrição */
 }
