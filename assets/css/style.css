@@ -1,0 +1,135 @@
+/* Estilize o header e a navegação */
+header {
+    background-color: white; /* Cor de fundo do header */
+    color: green; /* Cor do texto */
+    padding: 30px; /* Espaçamento interno */
+}
+
+.header-container {
+    display: flex; /* Usa Flexbox para layout */
+    align-items: center; /* Alinha os itens ao longo do eixo transversal */
+    position: relative; /* Necessário para o posicionamento absoluto dos itens */
+}
+
+.site-title {
+    margin: 0; /* Remove margens padrão */
+    flex: 1; /* Permite que o título ocupe o espaço restante */
+}
+
+.navigation {
+    position: absolute; /* Posiciona a navegação de forma absoluta */
+    left: 50%; /* Move a navegação para o centro horizontalmente */
+    transform: translateX(-50%); /* Ajusta o alinhamento para o centro */
+    display: flex; /* Usa Flexbox para os itens de navegação */
+}
+
+.navigation ul {
+    list-style: none; /* Remove marcadores padrão de lista */
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove preenchimento padrão */
+    display: flex; /* Exibe os itens de lista horizontalmente */
+}
+
+.navigation li {
+    margin: 0 15px; /* Espaçamento entre itens */
+}
+
+.navigation a {
+    color: #2e4170; /* Cor dos links */
+    text-decoration: none; /* Remove sublinhado dos links */
+    font-weight: bold; /* Torna o texto dos links em negrito */
+    text-align: center;
+}
+
+.navigation a:hover {
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilize o home-initial com Flexbox */
+#home-initial {
+    display: flex; /* Usa Flexbox para layout */
+    justify-content: space-between; /* Espaça as colunas igualmente */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 50px; /* Espaçamento interno */
+}
+
+.content-container {
+    display: flex; /* Usa Flexbox para layout interno */
+    flex-direction: row; /* Alinha os itens na horizontal */
+    width: 100%; /* Ocupa toda a largura do contêiner pai */
+}
+
+.texts {
+    flex: 1; /* Faz com que a coluna de texto ocupe o espaço disponível */
+    padding: 20px; /* Espaçamento interno */
+}
+
+.image-initial {
+    flex: 1; /* Faz com que a coluna de imagem ocupe o espaço disponível */
+    display: flex; /* Usa Flexbox para centralizar a imagem */
+    justify-content: center; /* Alinha a imagem horizontalmente ao centro */
+    align-items: center; /* Alinha a imagem verticalmente ao centro */
+}
+
+/* Estilo padrão para a imagem */
+.image-initial img {
+    max-width: 100%; /* Garante que a imagem não exceda a largura da coluna */
+    max-height: 350px; /* Limita a altura da imagem */
+    width: auto; /* Ajusta a largura automaticamente para manter a proporção */
+    height: auto; /* Permite que a altura se ajuste proporcionalmente */
+    object-fit: contain; /* Garante que a imagem seja contida dentro do espaço disponível */
+    display: block; /* Remove possíveis espaçamentos ao redor da imagem */
+}
+
+/* Media query para telas menores que 800px */
+@media (max-width: 800px) {
+    .image-initial img {
+        display: none; /* Esconde a imagem quando a largura da tela é menor que 800px */
+    }
+    .texts {
+        flex: 1 100%;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#professionals {
+    padding: 20px;
+    background-color: white;
+}
+
+.professionals-list {
+    display: flex;
+    justify-content: space-around;
+}
+
+.professional {
+    text-align: center;
+}
+
+.professional img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.button-vejamais {
+    background-color: #2e4170; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+.button-vejamais:hover {
+    background-color: #415894;
+}
