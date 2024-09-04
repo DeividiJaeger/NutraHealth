@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 /* Estilize o header e a navegação */
 header {
     background-color: white; /* Cor de fundo do header */
@@ -162,6 +166,23 @@ body {
     flex-wrap: wrap; /* Permite que os cards "quebrem" para a linha seguinte */
     justify-content: space-between; /* Espaça os cards igualmente */
     gap: 20px; /* Espaçamento entre os cards */
+}
+
+.button-card {
+    margin-top: 5px;
+    background-color: #2e4170; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+.button-card:hover {
+    background-color: #415894;
 }
 
 .card {
