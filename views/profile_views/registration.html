@@ -8,27 +8,35 @@
 </head>
 <body>
     {{ template "header.html" . }}
-        <section>
-           <h1>Faça seu Cadastro</h1>
-           <p>Insira seus dados de acordo com seus documentos.</p>
-           <form action="/register" method="POST" class="form-cadastro">
-                <div class="form-group">
-                    <label for="name">Nome:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="phone">Telefone:</label>
-                    <input type="tel" id="phone" name="phone" patter="[0-9]{11}" required>
-                    <small>Formato: 11999999999</small>
-                </div>
-                <div class="form-group">
-                    <button type="submit" class="button-submit">Cadastrar</button>
-                </div>
-           </form>
-        </section>
+    <section class="register-section">
+        <div class="form-container">
+            <div class="form-content">
+                <h1>Faça seu Cadastro</h1>
+                <p>Insira seus dados de acordo com seus documentos.</p>
+                <form action="/register" method="POST" class="form-cadastro">
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{11}" required>
+                        <small>Formato: (11) 9 99999999</small>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="button-submit">Cadastrar</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="imageRegister">
+                <img class="imageRegister" src="/assets/images/registerImage.png" alt="Imagem de Cadastro">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
