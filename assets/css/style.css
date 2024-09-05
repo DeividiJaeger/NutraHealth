@@ -96,6 +96,7 @@ header {
 }
 
 body {
+    box-sizing: border-box;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -192,30 +193,26 @@ body {
     margin: 0; /* Remove margem automática */
 }
 /* Estilização do registration */
-
 /* Cores */
 :root {
-    --green: #48bb78; /* cor verde principal */
-    --green-hover: #38a169; /* cor verde para hover */
-    --background-color: #f7fafc; /* cor de fundo clara */
-    --input-background: #f5f5f5; /* fundo dos inputs */
-    --text-color: #2e4170; /* cor do texto principal */
-    --text-muted: #a0aec0; /* cor do texto desabilitado */
+    --background-color: #f7fafc;
+    --input-background: #f5f5f5;
+    --text-color: #2e4170;
+    --text-muted: #a0aec0;
+    --green-hover: #45a049;
 }
 
-body {
-    color: var(--text-color);
-}
-
+/* Container da seção de cadastro */
 .register-section {
+    color: #2e4170;
     max-width: 90%;
     margin: 50px auto;
     padding: 20px;
     background-color: white;
-    border-radius: 8px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
 
+/* Estilizando o formulário e imagem lado a lado */
 .form-container {
     display: flex;
     justify-content: space-between;
@@ -224,31 +221,15 @@ body {
 }
 
 .form-content {
-    width: 55%;
-    text-align: left;
-}
-
-.form-cadastro {
-    margin-top: 20px;
-}
-
-.register-section h1 {
-    font-weight: bold;
-    color: var(--green);
-    margin-bottom: 10px;
-}
-
-.register-section p {
-    margin-bottom: 20px;
-    color: var(--text-color);
+    flex-basis: 50%;
+    min-width: 280px;
+    padding: 0;
 }
 
 .imageRegister {
     width: 40%;
-    max-width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .imageRegister img {
@@ -258,62 +239,73 @@ body {
     border-radius: 8px;
 }
 
-.form-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    margin-bottom: 5px;
-    color: var(--text-color);
-    font-weight: bold;
-}
-
+/* Estilizando os inputs */
 input[type="text"],
 input[type="email"],
-input[type="tel"] {
+input[type="tel"],
+input[type="password"] {
     width: 100%;
-    padding: 12px 20px;
+    padding: 10px;
     border: none;
-    border-radius: 8px;
-    background-color: var(--input-background);
-    color: var(--text-color);
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    color: #2e4170;
     font-size: 1rem;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-small {
-    display: block;
-    margin-top: 5px;
-    color: var(--text-muted);
+/* Foco nos inputs */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 5px rgba(46, 65, 112, 0.5); /* Sombra ao focar */
 }
 
+/* Estilizando o botão de submit separadamente */
 .button-submit {
     width: 100%;
     padding: 15px;
     border: none;
-    border-radius: 50px;
-    background-color: var(--green);
+    border-radius: 5px;
+    background-color: green;
     color: white;
     font-weight: bold;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
+/* Efeito hover no botão */
 .button-submit:hover {
-    background-color: var(--green-hover);
+    background-color: #45a049;
 }
 
-/* Media queries para responsividade */
-@media (max-width: 768px) {
+.form-group {
+    padding-right: 20px;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    background-color: #e0e0e0;
+}
+
+/* Responsividade */
+@media (max-width: 720px) {
     .form-container {
         flex-direction: column;
     }
+
     .imageRegister {
         display: none;
     }
-}
 
-@media (max-width: 480px) {
     .form-content {
         width: 100%;
     }
